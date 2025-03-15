@@ -44,7 +44,7 @@
   margin: 5px 0;
   padding: 7px 10px;
   width: calc(100% - 2px);
-  height: 3em;
+  min-height: 3em;
 
   border: 1px solid transparent;
   border-radius: 3px;
@@ -56,11 +56,24 @@
   font-family: inherit;
 
   box-sizing: border-box;
+  white-space: pre-line;
+  
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+.todo-list-element:hover {
+    background-color: #838383;
+    border-color: #f1f1f1;
 }
 
 .todo-list-element:nth-child(even) {
   background-color: #acacac;
 }
+
+.todo-list-element:nth-child(even):hover {
+    background-color: #d6d6d6;
+    border-color: #f1f1f1;
+  }
 
 @media only screen and (max-width: 600px) {
   .todo-component {
